@@ -52,6 +52,11 @@ return (int) (numerodescompuesto);
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        texto3 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -108,6 +113,31 @@ return (int) (numerodescompuesto);
             }
         });
 
+        jButton7.setText("Metodo 4");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+
+        jButton8.setText("Aceptar Metodo4");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("CAMPO1");
+
+        jLabel2.setText("CAMPO2");
+
+        texto3.setText("En espera....");
+        texto3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                texto3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -116,20 +146,31 @@ return (int) (numerodescompuesto);
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(23, 23, 23)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(texto1, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(45, 45, 45)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
-                            .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton2)
                             .addComponent(jButton4)
-                            .addComponent(jButton6))))
+                            .addComponent(jButton6)
+                            .addComponent(jButton8)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(texto3, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(texto1, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(54, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -147,9 +188,19 @@ return (int) (numerodescompuesto);
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton5)
                     .addComponent(jButton6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 87, Short.MAX_VALUE)
-                .addComponent(texto1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton8)
+                    .addComponent(jButton7))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(texto1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(texto3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(23, 23, 23))
         );
@@ -185,33 +236,63 @@ return (int) (numerodescompuesto);
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-        texto2.setText(" El siguiente metodo es para saber si una palabra es un palindro \n palindromo es una palabra que se lee igual al revez \n "
-            + " \n \n  INGRESE UN PALABEA EN EL CAMPO DE ARRIBA....");
+        texto2.setText(" El siguiente metodo es para saber si una palabra es un palindromo \n palindromo es una palabra que se lee igual al revez \n como por ejemplo olo=olo \n "
+            + " \n \n  INGRESE UN PALABEA EN EL CAMPO1 DE ARRIBA....");
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-
-double numero;
-
-numero = Double.parseDouble(texto1.getText());
-
-        
-        
-        texto2.setText("el factorial del numero es:"+  String.valueOf(factorial(numero)) );
-
-
+ String cadena2="";
+   int numero=Integer.parseInt(texto1.getText());
+   
+           if (numero%2==0) {
+               int a;
+              a=numero/2;
+               System.out.println("Uno de los resultados es "+a+"*2");
+             //  texto2.setText("Uno de los resultados es "+ a +"*2");
+               cadena2+=("Uno de los resultados es "+ a +"*2"+"\n");
+               
+           }
+         if (numero%3==0) {
+              int b;
+              b=numero/3;
+               System.out.println("Uno de los resultado es "+b+"*3");
+               //texto2.setText("Uno de los resultados es "+b+"*3");
+                cadena2+=("Uno de los resultados es "+ b +"*3"+"\n");
+                          }
+          if (numero%5==0) {
+               int b;
+              b=numero/5;
+               System.out.println("Uno de los resultado es "+b+"*5");
+             //  texto2.setText("Uno de los resultados es "+b+"*5");
+                cadena2+=("Uno de los resultados es "+ b +"*5"+"\n");
+               
+          }         
+            if (numero%7==0) {             
+              int b;
+              b=numero/7;
+               System.out.println("Uno de los resultado es "+b+"*7");
+            //   texto2.setText("Uno de los resultados es "+b+"*7");
+                cadena2+=("Uno de los resultados es "+ b +"*7"+"\n");
+          }                           
+         else if (numero%2!=0 && numero%3!=0 && numero%5!=0 && numero%7!=0) {
+             System.out.println("Uno de los resultado es "+numero+"*1");
+            // texto2.setText("Uno de los resultados es "+numero+"*1");
+              cadena2+=("Uno de los resultados es "+ numero +"*1"+"\n");
+               
+           }
+        texto2.setText(cadena2);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        texto2.setText(" Factorial de un numero y sumatoria tota de todos  \n  los dijitos que conforman su facotial \n"
-                + " \n \n INGRESE UN NUMERO EN EL CAMPO DE ARRIBA.... ");
+        texto2.setText(" Ayar 1 o mas factores de un   \n  numero determinado \n"
+                + " \n \n INGRESE UN NUEMRO EN EL CAMPO 1 DE ARRIBA.... ");
         
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         texto2.setText(" Invertir una cadena de TEXTO o NUMEROS  \n  "
-                + " \n \n INGRESE UN NUMERO O CADENA DE TEXTO EN EL CAMPO DE ARRIBA.... ");
+                + " \n \n INGRESE UN NUMERO O CADENA DE TEXTO EN EL CAMPO1 DE ARRIBA.... ");
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -229,6 +310,44 @@ numero = Double.parseDouble(texto1.getText());
         }
      texto2.setText(cadena2);
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        texto2.setText("El siguiete metodo servida si una horacion \n contiene una palabra especifica que se \n a de a de indicar"
+                + "\n \n LLENAR LOS CAMPOS 1 y 2 \n Campo1= una horacion \n Campo2= Palabra a buscar en la horacion");
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+         
+        
+        
+        
+        String textouno = texto1.getText();
+        String mayuscula1=textouno.toUpperCase();
+       
+        
+         
+        String textodos = texto3.getText();
+       String mayuscula2=textodos.toUpperCase();
+      
+        
+         int pos= mayuscula1.indexOf(mayuscula2);
+          if(pos != -1) {
+         
+         System.out.println("SI contiene esta palababra: "+textodos);
+         texto2.setText("SI contiene esta palababra: "+textodos);
+          }
+          else if (pos ==-1) {
+                  System.out.println("NO contine esta palabra: "+textodos);
+                  texto2.setText("NO contiene esta palababra: "+textodos);
+             }
+  
+     
+    
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void texto3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_texto3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_texto3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -272,8 +391,13 @@ numero = Double.parseDouble(texto1.getText());
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField texto1;
     public static javax.swing.JTextArea texto2;
+    private javax.swing.JTextField texto3;
     // End of variables declaration//GEN-END:variables
 }
