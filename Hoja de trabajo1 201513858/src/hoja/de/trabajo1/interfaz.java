@@ -5,6 +5,8 @@
  */
 package hoja.de.trabajo1;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Cesar
@@ -48,6 +50,8 @@ return (int) (numerodescompuesto);
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -90,6 +94,20 @@ return (int) (numerodescompuesto);
             }
         });
 
+        jButton5.setText("Metodo 3");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
+        jButton6.setText("Aceptar Metodo3");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -105,12 +123,14 @@ return (int) (numerodescompuesto);
                         .addGap(45, 45, 45)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE))
+                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
+                            .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton2)
-                            .addComponent(jButton4))))
-                .addContainerGap(27, Short.MAX_VALUE))
+                            .addComponent(jButton4)
+                            .addComponent(jButton6))))
+                .addContainerGap(54, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -123,7 +143,11 @@ return (int) (numerodescompuesto);
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton3)
                     .addComponent(jButton4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton5)
+                    .addComponent(jButton6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 87, Short.MAX_VALUE)
                 .addComponent(texto1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -161,7 +185,7 @@ return (int) (numerodescompuesto);
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-        texto2.setText(" el siguiente metodo es para saber si una palabra es un palindro \n palindromo es una palabra que se lee igual al revez \n "
+        texto2.setText(" El siguiente metodo es para saber si una palabra es un palindro \n palindromo es una palabra que se lee igual al revez \n "
             + " \n \n  INGRESE UN PALABEA EN EL CAMPO DE ARRIBA....");
 
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -180,10 +204,31 @@ numero = Double.parseDouble(texto1.getText());
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        texto2.setText("Factorial de un numero y sumatoria tota de todos  \n  los dijitos que connforman su facotial \n"
+        texto2.setText(" Factorial de un numero y sumatoria tota de todos  \n  los dijitos que conforman su facotial \n"
                 + " \n \n INGRESE UN NUMERO EN EL CAMPO DE ARRIBA.... ");
         
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        texto2.setText(" Invertir una cadena de TEXTO o NUMEROS  \n  "
+                + " \n \n INGRESE UN NUMERO O CADENA DE TEXTO EN EL CAMPO DE ARRIBA.... ");
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+   String cadena=texto1.getText();
+    String cadena2 = "";
+    
+    char []vectorcaracteres=cadena.toCharArray();
+    for (int i = vectorcaracteres.length-1; i>=0; i--) {
+    cadena2+= vectorcaracteres[i];
+    System.out.print(vectorcaracteres[i]);
+    
+   
+            
+            
+        }
+     texto2.setText(cadena2);
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -225,6 +270,8 @@ numero = Double.parseDouble(texto1.getText());
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField texto1;
     public static javax.swing.JTextArea texto2;
