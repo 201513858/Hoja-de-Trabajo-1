@@ -236,8 +236,8 @@ return (int) (numerodescompuesto);
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-        texto2.setText(" El siguiente metodo es para saber si una palabra es un palindromo \n palindromo es una palabra que se lee igual al revez \n como por ejemplo olo=olo \n "
-            + " \n \n  INGRESE UN PALABEA EN EL CAMPO1 DE ARRIBA....");
+        texto2.setText(" El siguiente metodo es para saber si una palabra es un palindromo \n Palindromo es una palabra que se lee igual al revez \n como por ejemplo olo=olo \n "
+            + " \n \n  INGRESE UN PALABRA EN EL CAMPO1 DE ARRIBA....");
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -312,8 +312,8 @@ return (int) (numerodescompuesto);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        texto2.setText("El siguiete metodo servida si una horacion \n contiene una palabra especifica que se \n a de a de indicar"
-                + "\n \n LLENAR LOS CAMPOS 1 y 2 \n Campo1= una horacion \n Campo2= Palabra a buscar en la horacion");
+        texto2.setText("El siguiete metodo servira si una oracion \n contiene una palabra especifica que se \n a de a de indicar"
+                + "\n \n LLENAR LOS CAMPOS 1 y 2 \n Campo1= una oracion \n Campo2= Palabra a buscar en la oracion");
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
