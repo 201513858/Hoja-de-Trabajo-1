@@ -1,0 +1,11 @@
+¿Qué entiende como "commit"?
+Es en donde podemos agregar, quitar, o modificar cosas a un proyecto que se esta realizando, 
+donde se puede ver de manera clara cada cambio que se hace.
+
+¿Qué entiende como "merge"?
+Incorporacion de cambios a la rama master o sirve para fusionar diferentes ramas.
+
+
+¿Cuál es la diferencia entre "Pull" y "Push"?
+Que push sirve para mandar datos o cambios, es decir compartir o subir a unrepositorio remoto y
+pull para recibir datos o  para recuperar y unir automáticamente la rama remota con tu rama actual.
