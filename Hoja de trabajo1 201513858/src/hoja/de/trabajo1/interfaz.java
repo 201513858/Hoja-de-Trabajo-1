@@ -308,7 +308,7 @@ return (int) (numerodescompuesto);
             
             
         }
-     texto2.setText(cadena2);
+     texto2.setText(cadena2+"\nCarne: 2015-13858");
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
